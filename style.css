@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.row {
+    display: flex;
+    height: 30%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.paper {
+    background-color: white;
+    text-align: center;
+    width: 40%;
+    height: 80%;
+    background-image: url(뚜찌.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.paper:hover {
+    animation: jello-vertical 0.9s both;
+}
+
+
+.bomb {
+    background-image: url("당첨.png");
+    animation: fade-out 1s ease-out both;
+}
+
+
+
+@keyframes shadow-drop-2-center {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translateZ(50px);
+        transform: translateZ(50px);
+        -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+
+@keyframes jello-vertical {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(0.85, 1.15, 1);
+        transform: scale3d(0.85, 1.15, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+
+    @keyframes fade-out {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
