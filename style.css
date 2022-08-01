@@ -28,8 +28,8 @@ body {
 }
 
 .control-box {
-	width: 300px;
-	height: 300px;
+	width: 600px;
+	height: 600px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -44,12 +44,16 @@ body {
 
 button {
 	font-family: "Jua", sans-serif;
-	font-size: 20px;
+	font-size: 40px;
+}
+
+span {
+	font-size: 40px;
 }
 
 .control-box > div > button {
-	width: 40px;
-	margin: 0px 10px;
+	width: 80px;
+	margin: 0px 30px;
 }
 
 .paper {
