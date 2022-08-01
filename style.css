@@ -35,6 +35,7 @@ body {
 	align-items: center;
 	justify-content: space-around;
 	border: #ad9fe3 solid 5px;
+	border-radius: 50px;
 }
 .control-box > div {
 	display: flex;
@@ -45,6 +46,10 @@ body {
 button {
 	font-family: "Jua", sans-serif;
 	font-size: 40px;
+	border-radius: 20px;
+	border: #ad9fe3 solid 5px;
+	color: black;
+	background-color: white;
 }
 
 span {
@@ -54,6 +59,12 @@ span {
 .control-box > div > button {
 	width: 80px;
 	margin: 0px 30px;
+}
+
+.start-btn {
+	padding: 15px;
+	background-color: #ad9fe3;
+	color: white;
 }
 
 .paper {

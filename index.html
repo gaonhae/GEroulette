@@ -29,7 +29,7 @@
 					<!-- 당첨의 개수는 카드의 개수보다 많을 수 없음 -->
 					<button x-on:click=" if (bad < row * 2 - 1) bad +=1 ">+</button>
 				</div>
-				<button x-on:click=" height(row); run(row, bad);">게임 시작!!</button>
+				<button x-on:click=" height(row); run(row, bad);" class="start-btn">게임 시작!!</button>
 			</div>
 		</div>
 		<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
