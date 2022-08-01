@@ -1,0 +1,4 @@
+TO-DO
+
+should be choose number of good, bad
+should be choose number of card

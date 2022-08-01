@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>뚜빠뽀찌 룰렛</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <title>뚜빠뽀찌 룰렛</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <div class="row">
-        <div class="paper"></div>
-        <div class="paper"></div>
-    </div>
-    <div class="row">
-        <div class="paper"></div>
-        <div class="paper"></div>
-    </div>
-    <div class="row">
-        <div class="paper"></div>
-        <div class="paper"></div>
-    </div>
-
-
-    <script src="main.js"></script>
-</body></html>
+	<body>
+		<div x-data="{ row: 3, bad : 1 }" class="content-box">
+			<template x-for="i in row">
+				<div class="row" style="display: none">
+					<div class="paper"></div>
+					<div class="paper"></div>
+				</div>
+			</template>
+			<div class="control-box">
+				<div class="card-row">
+					<!-- 카드의 개수는 양수여야 하고, 당첨 카드의 개수보다 적을 수 없음 -->
+					<button x-on:click=" if (row > 1 && bad < (row-1) * 2 ) row -=1;">ㅡ</button>
+					<span>카드 개수 : </span>
+					<span x-text="row* 2"></span>
+					<button x-on:click=" if (row < 6) row +=1;">+</button>
+				</div>
+				<div class="bad-row">
+					<button x-on:click=" if (bad > 1) bad -=1 ">ㅡ</button>
+					<span>당첨 개수 : </span>
+					<span x-text="bad"></span>
+					<!-- 당첨의 개수는 카드의 개수보다 많을 수 없음 -->
+					<button x-on:click=" if (bad < row * 2 - 1) bad +=1 ">+</button>
+				</div>
+				<button x-on:click=" height(row); run(row, bad);">게임 시작!!</button>
+			</div>
+		</div>
+		<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
